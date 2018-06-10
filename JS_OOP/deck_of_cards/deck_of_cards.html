@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      class Ninja{
+        constructor(name, health = 100){
+          this.name = name;
+          this.health = health;
+          this.speed = 3;
+          this.strength = 3;
+        }
+        sayName(){
+          console.log(`This ninja's name is ${this.name}`);
+          return this;
+        }
+        sayStats(){
+          console.log(`Name: ${this.name}, Health: ${this.health}, Speed: ${this.speed}, Strength: ${this.strength}`);
+          return this;
+        }
+        drinkSake(){
+          this.health += 10;
+          console.log(`Health: ${this.health}`);
+          return this;
+        }
+      }
+      var myNinja = new Ninja("Sara");
+     
+      myNinja.sayName().sayStats().drinkSake().drinkSake();
+
+      class Sensei extends Ninja {
+        constructor(name, health){
+          super(name, 200);
+          this.wisdom = 10;
+          //this.speed = 10;
+          //this.strength = 3;
+        }
+        speakWisdom(){
+          this.drinkSake();
+          console.log(`Sake is life.`)
+        }
+      }
+      var Sensei1 = new Sensei("William");
+      console.log(Sensei1);
+      Sensei1.speakWisdom();
+
+    </script>
+  </body>
+</html>
