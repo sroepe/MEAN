@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <form action="/result" method="POST">
+      <p>Your Name: <input type="text" name="name"></p>
+
+      <p>Dojo Location: <select name="city">
+        <option value="San Jose">San Jose</option>
+        <option value="Seattle">Seattle</option>
+        <option value="Silicon Valley">Silicon Valley</option>
+        </select>  
+      </p>
+
+      <p>Favorite Language: <select name="language">
+        <option value="Python">Python</option>
+        <option value="MEAN">MEAN</option>
+        <option value="Java">Java</option>
+        </select>  
+      </p>
+      
+      <label for="comment">Comment (optional):</label>
+      <textarea name="comment"></textarea>
+
+      <p><input type="submit" value="Submit"></p>
+    </form>
+  </body>
+</html>

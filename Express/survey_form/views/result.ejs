@@ -1,0 +1,14 @@
+<html>
+  <body>
+    <h3>Submitted Information:</h3> <!-- /result route -->
+    <br>
+    <p>Name: <%= postData.name %></p>
+    <p>Dojo Location: <%= postData.city %></p>
+    <p>Favorite Language: <%= postData.language %></p>
+    <p>Comment: <%= postData.comment %></p>
+    <br>
+    <form action="/goback" method="POST">
+      <p><input type="submit" value="Go Back"></p>
+    </form>
+  </body>
+</html>
